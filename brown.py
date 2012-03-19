@@ -10,15 +10,19 @@ from numpy import array, zeros, sqrt, shape
 from pylab import *
 
 
+# Random walk:
+# define a timestep dt
+# define the total time to be run T = total number of steps N*dt
+# initialize at time t0
+# step forward: draw a random number, and add it to the state x(t)
+# repeat
+# 
+# the formula is x(t+dt) = x(t) sqrt(xi)
+# with xi a random number 
+
+# define the step in time
+
 def Brown():
-
-	S0 = 1
-
-	T = 1
-	dt = 0.02
-	sigma = 0.4
-	mu = 1
-	N_Sim = 1
 
 	Steps=round(T/dt); #Steps in years
 	S = zeros([N_Sim, Steps], dtype=float)
@@ -30,15 +34,32 @@ def Brown():
 	                S[j,i+1]=S[j,i]+S[j,i]*(mu-0.5*pow(sigma,2))*dt+sigma*S[j,i]*sqrt(dt)*standard_normal();
 	        plot(x, S[j])
 
-print("Combien de particules voulez vous? ")
-N_Sim = input()
+# main program start
+# initialize 
+t0=0.
+T=1.
+dt=0.01
+N=(T-t0)/dt
+print N
+sigma = 0.5
+mu = 0.
+N_Part = 3
+x=zeros( [N_part,N], dtype=float )
+print x
 
+# first method: run each particle from 0 to T
+# start again and run etc.
 n = 0
 while n < N_Sim:
 	n = n + 1
 	Brown()
 
-title('Brownian motion representation for N particles', N)
+# second method: evolve all Particles from t to t+dt
+t=t0
+while t<T:
+  step(x,t)
+
+title('Brownian motion representation for N particles', N_Sim)
 xlabel('steps')
 ylabel('stock price')
 show()
