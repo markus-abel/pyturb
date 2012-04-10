@@ -30,7 +30,7 @@ def step(x,dt):
 
 t0=0.
 T=1.
-dt=0.1
+dt=0.01
 N=(T-t0)/dt
 print "number of time steps",N
 print("How many particles do you want? ")
@@ -46,25 +46,31 @@ time = []
 # time loop to count each time steps:
 
 t = 0
-while t<T-dt:
-	t = t + dt
-	time.append(t-dt)
+while t<T:
+  time.append(t)
+  t = t + dt  
 
-print "Elapsed time :"
-print ""
+
+#print "Elapsed time :"
+#print ""
 # while loop
-t=t0
+t=0
 n=0
-while n<N-1 :
-	x[:,n+1]=step(x[:,n],dt)
-	t = t + dt	
-	n = n+1
-	print t
+while n<N-1:
+  x[:,n+1]=step(x[:,n],dt)
+  t = t + dt	
+  n = n+1
+#  print t
 	
 tabx.append(x)
 TabTime = np.array(time)
 
+print "Time :"
+print ""
 print TabTime
+print ""
+print "Positions in each time step :"
+print ""
 print tabx
 
 with open('BinariesResults2', 'wb') as fichier:

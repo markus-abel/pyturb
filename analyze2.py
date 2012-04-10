@@ -12,7 +12,7 @@ def analyze(x, t):
   Tmoment4 = []
 
   i = 0
-  while i < 10:
+  while i < 100:
     
     mean = np.mean(y[i])
     moment2 = scipy.stats.moment((y[i]), moment=2)
