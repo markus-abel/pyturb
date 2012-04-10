@@ -46,7 +46,7 @@ time = []
 # time loop to count each time steps:
 
 t = 0
-while t<T:
+while t<T-dt:
   time.append(t)
   t = t + dt  
 

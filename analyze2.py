@@ -11,7 +11,7 @@ def analyze(x, t):
   Tmoment3 = []
   Tmoment4 = []
 
-  i = 0
+  i = 1
   while i < 100:
     
     mean = np.mean(y[i])
