@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import scipy.stats.stats
 
 
-f = h5py.File('St0.99.h5', 'r')    # lecture du fichier
+f = h5py.File('St60.h5', 'r')    # lecture du fichier
 
 # il est important de connaitre la composition du fichier, les groupes qui le composent.
 
@@ -31,7 +31,7 @@ z = np.array(x2)
 print ("Shape of z :", z.shape)
 
 
-# Recuperation des donnees de positions pour 3 particules:
+# Recuperation des donnees de positions pour toutes les particules:
 
 tabTime = []
 
@@ -135,7 +135,7 @@ Tous les plots a 1D :
 
 plt.figure(1)
 
-plt.title("Standard deviation of X, Y, Z of 1280 particles for 3300 dt and St = 0.99")
+plt.title("Standard deviation of X, Y, Z of 1280 particles for 3300 dt and St = 60")
 plt.xlabel("Time")
 plt.ylabel("Standard deviation")
 plt.plot(tabTime, StdX)
@@ -147,7 +147,7 @@ plt.legend(("Standard deviation of X", "Standard deviation of Y", "Standard devi
 
 plt.figure(2)
 
-plt.title("Moments 2 of X, Y, Z of 1280 particles for 3300 dt and St = 0.99")
+plt.title("Moments 2 of X, Y, Z of 1280 particles for 3300 dt and St = 60")
 plt.xlabel("Time")
 plt.ylabel("Moment 2")
 plt.plot(tabTime, Moment2x)
@@ -159,7 +159,7 @@ plt.legend(("Moment 2 of X", "Moment 2 of Y", "Moment 2 of Z"), 'best')
 
 plt.figure(3)
 
-plt.title("Moments 4 of X, Y, Z of 1280 particles for 3300 dt and St = 0.99")
+plt.title("Moments 4 of X, Y, Z of 1280 particles for 3300 dt and St = 60")
 plt.xlabel("Time")
 plt.ylabel("Moment 4")
 plt.plot(tabTime, Moment4x)
@@ -171,7 +171,7 @@ plt.legend(("Moment 4 of X", "Moment 4 of Y", "Moment 4 of Z"), 'best')
 
 plt.figure(4)
 
-plt.title("Moments 6 of X, Y, Z of 1280 particles for 3300 dt and St = 0.99")
+plt.title("Moments 6 of X, Y, Z of 1280 particles for 3300 dt and St = 60")
 plt.xlabel("Time")
 plt.ylabel("Moment 6")
 plt.plot(tabTime, Moment6x)
@@ -183,7 +183,7 @@ plt.legend(("Moment 6 of X", "Moment 6 of Y", "Moment 6 of Z"), 'best')
 
 plt.figure(5)
 
-plt.title("Moments 2 of X, Y, Z on Standard deviation of X, Y, Z of 1280 particles for 3300 dt and St = 0.99")
+plt.title("Moments 2 of X, Y, Z on Standard deviation of X, Y, Z of 1280 particles for 3300 dt and St = 60")
 plt.xlabel("Time")
 plt.ylabel("Moment 2 / Standard deviation")
 plt.plot(tabTime, M2xStdX)
@@ -195,7 +195,7 @@ plt.legend(("Moment 2 / Standard deviation of X", "Moment 2 / Standard deviation
 
 plt.figure(6)
 
-plt.title("Moments 4 of X, Y, Z on (Standard deviation)2 of X, Y, Z of 1280 particles for 3300 dt and St = 0.99")
+plt.title("Moments 4 of X, Y, Z on (Standard deviation)2 of X, Y, Z of 1280 particles for 3300 dt and St = 60")
 plt.xlabel("Time")
 plt.ylabel("Moment 4 / (Standard deviation)2")
 plt.plot(tabTime, M4xStdX)
@@ -207,7 +207,7 @@ plt.legend(("Moment 4 / (Standard deviation)2 of X", "Moment 4 / (Standard devia
 
 plt.figure(7)
 
-plt.title("Moments 6 of X, Y, Z on (Standard deviation)3 of X, Y, Z of 1280 particles for 3300 dt and St = 0.99")
+plt.title("Moments 6 of X, Y, Z on (Standard deviation)3 of X, Y, Z of 1280 particles for 3300 dt and St = 60")
 plt.xlabel("Time")
 plt.ylabel("Moment 6 / (Standard deviation)3")
 plt.plot(tabTime, M6xStdX)
@@ -226,7 +226,7 @@ fig = plt.figure(8)
   
 ax = fig.gca(projection='3d')
 
-ax.set_title("Standard deviation of 1280 particles for 3300 dt and St = 0.99")
+ax.set_title("Standard deviation of 1280 particles for 3300 dt and St = 60")
 ax.set_xlabel('Standard deviation of X')
 ax.set_ylabel('Standard deviation of Y')
 ax.set_zlabel('Standard deviation of Z')
@@ -239,7 +239,7 @@ fig = plt.figure(9)
   
 ax = fig.gca(projection='3d')
 
-ax.set_title("Moments 2 of 1280 particles for 3300 dt and St = 0.99")
+ax.set_title("Moments 2 of 1280 particles for 3300 dt and St = 60")
 ax.set_xlabel('Moment 2 of X')
 ax.set_ylabel('Moment 2 of Y')
 ax.set_zlabel('Moment 2 of Z')
@@ -252,7 +252,7 @@ fig = plt.figure(10)
   
 ax = fig.gca(projection='3d')
 
-ax.set_title("Moments 4 of 1280 particles for 3300 dt and St = 0.99")
+ax.set_title("Moments 4 of 1280 particles for 3300 dt and St = 60")
 ax.set_xlabel('Moment 4 of X')
 ax.set_ylabel('Moment 4 of Y')
 ax.set_zlabel('Moment 4 of Z')
@@ -265,7 +265,7 @@ fig = plt.figure(11)
   
 ax = fig.gca(projection='3d')
 
-ax.set_title("Moments 6 of 1280 particles for 3300 dt and St = 0.99")
+ax.set_title("Moments 6 of 1280 particles for 3300 dt and St = 60")
 ax.set_xlabel('Moment 6 of X')
 ax.set_ylabel('Moment 6 of Y')
 ax.set_zlabel('Moment 6 of Z')
@@ -278,7 +278,7 @@ fig = plt.figure(12)
   
 ax = fig.gca(projection='3d')
 
-ax.set_title("Moments 2 of X, Y, Z on Standard deviation of X, Y, Z of 1280 particles for 3300 dt and St = 0.99")
+ax.set_title("Moments 2 of X, Y, Z on Standard deviation of X, Y, Z of 1280 particles for 3300 dt and St = 60")
 ax.set_xlabel('Moment 2 / Standard deviation of X')
 ax.set_ylabel('Moment 2 / Standard deviation of Y')
 ax.set_zlabel('Moment 2 / Standard deviation of Z')
@@ -291,7 +291,7 @@ fig = plt.figure(13)
   
 ax = fig.gca(projection='3d')
 
-ax.set_title("Moments 4 of X, Y, Z on (Standard deviation)2 of X, Y, Z of 1280 particles for 3300 dt and St = 0.99")
+ax.set_title("Moments 4 of X, Y, Z on (Standard deviation)2 of X, Y, Z of 1280 particles for 3300 dt and St = 60")
 ax.set_xlabel('Moment 4 / (Standard deviation)2 of X')
 ax.set_ylabel('Moment 4 / (Standard deviation)2 of Y')
 ax.set_zlabel('Moment 4 / (Standard deviation)2 of Z')
@@ -304,7 +304,7 @@ fig = plt.figure(14)
   
 ax = fig.gca(projection='3d')
 
-ax.set_title("Moments 6 of X, Y, Z on (Standard deviation)3 of X, Y, Z of 1280 particles for 3300 dt and St = 0.99")
+ax.set_title("Moments 6 of X, Y, Z on (Standard deviation)3 of X, Y, Z of 1280 particles for 3300 dt and St = 60")
 ax.set_xlabel('Moment 6 / (Standard deviation)3 of X')
 ax.set_ylabel('Moment 6 / (Standard deviation)3 of Y')
 ax.set_zlabel('Moment 6 / (Standard deviation)3 of Z')
