@@ -1,0 +1,19 @@
+Requirements
+
+- Read several formats and pass to python
+- Apply One and the same analysis to the data
+- choose automatically what is possible for the
+   given data
+- Choose display of results among a list of
+   possibilities
+
+analysis, definition
+  an analysis consists of
+    methods applied to particle information
+
+particle information
+  required: position, velocity, time
+  optional: 
+    particle velocity gradients, particle acceleration
+    fluid velocity, fluid velocity gradients, fluid particle acceleration
+    time independent information: Stokes number, or geometry

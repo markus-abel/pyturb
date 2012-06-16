@@ -1,0 +1,35 @@
+Requirements
+
+- Read several formats and pass to python
+- Apply One and the same analysis to the data
+- choose automatically what is possible for the
+   given data
+- Choose display of results among a list of
+   possibilities
+
+analysis, definition
+  an analysis consists of
+    methods applied to particle information
+
+analysis collection:
+  set of analysis methods depending on particle information
+
+minimal analysis:
+  particle position moments averaged over space (gives spatial variation)
+    time dependence gives idea about evolution of particles in time,
+    might be a optionally a movie
+  particle velocity moments averaged over space
+  particle velocity pdf averaged over space and time (convergence assumed)
+  
+extended analysis for inhomogeneous flows:
+  averaging only along given directions (e.g. in the plane channel over the parallel 
+  planes
+  
+
+particle information
+  required: position, velocity, time
+  optional: 
+    particle velocity gradients, particle acceleration
+    fluid velocity, fluid velocity gradients, fluid particle acceleration
+    time independent information: Stokes number, or geometry
+
