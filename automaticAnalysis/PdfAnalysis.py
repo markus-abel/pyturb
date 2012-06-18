@@ -15,11 +15,13 @@ class pdfAnalysis( AbstractAnalysis ):
   
   def __init__( self , name, datafile,args = "" ):
     self.name = name
-    self.datafile = 'data/St60.h5'
+    #print name, self.name
+    self.datafile = datafile     #'data/St60.h5'
+    #print datafile, self.datafile
     self.args = args
     try:
-      with open(self.datafile) as f: 
-	self.f = h5py.File(self.datafile, 'r')    # lecture du fichier
+      with open(self.datafile) as self.f: 
+        self.f = h5py.File(self.datafile, 'r')    # lecture du fichier
     except IOError as e:
       print 'Oh dear, no data available: check file.', datafile    
 #      exit()
@@ -48,13 +50,13 @@ class pdfAnalysis( AbstractAnalysis ):
       
   def info(self):
     print "Type of Analysis"+self.name
-    print "working on data"+datafile
-    print "datafile info"+f
+    print "working on data"+self.datafile
+    print "datafile info",self.f
    
   
   
   
   
-datafile='data/St60.h5'
+datafile='/home/markus/uni/markus/theses/JustinJacquot/pyturb/data/St60.h5'
 A=pdfAnalysis("acceleration",datafile)
 A.info()
